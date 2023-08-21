@@ -19,7 +19,7 @@ void rev_string(char *s)
         }
 
         start = s;
-        end = s + c - 1; // Point to the last character
+        end = s + c - 1; /* Point to the last character */
 
         for (i = 0; i < c / 2; i++)
         {
@@ -41,3 +41,4 @@ int main(void)
 
     return 0;
 }
+
