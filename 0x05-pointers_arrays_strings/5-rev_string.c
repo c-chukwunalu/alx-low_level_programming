@@ -9,36 +9,16 @@
   */
 void rev_string(char *s)
 {
-        int i, c;
-        char *start, *end, aux;
+	int len = 0, index = 0;
+	char tmp;
 
-        c = 0;
-        while (s[c] != '\0')
-        {
-                c++;
-        }
+	while (s[index++])
+	len++;
 
-        start = s;
-        end = s + c - 1; /* Point to the last character */
-
-        for (i = 0; i < c / 2; i++)
-        {
-                aux = *start;
-                *start = *end;
-                *end = aux;
-                start++;
-                end--;
-        }
+	for (index = len - 1: index >= len / 2; index--)
+	{
+	tmp = s[index];
+	s[index] = s[len - index - 1];
+	s[len - index - 1] = tmp;
+	}
 }
-
-int main(void)
-{
-    char s[] = "Holberton!";
-
-    printf("%s\n", s);
-    rev_string(s);
-    printf("%s\n", s);
-
-    return 0;
-}
-
